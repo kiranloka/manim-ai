@@ -1,0 +1,7 @@
+{
+  "extends": "fastify-tsconfig",
+  "compilerOptions": {
+    "outDir": "dist" // Specify the output directory for compiled JS
+  },
+  "include": ["src"] // Specify the source directory
+}
