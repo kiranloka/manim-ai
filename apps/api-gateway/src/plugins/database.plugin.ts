@@ -1,15 +1,16 @@
 import { MongoClient, Db } from "mongodb";
+import "dotenv/config";
 
 let client: MongoClient;
 let db: Db;
 
 export const connectDatabase = async (): Promise<Db> => {
   try {
-    if (!process.env.MONGO_URL) {
+    if (!process.env.MONGODB_URI) {
       throw new Error("Mongo Url is required!");
     }
 
-    client = new MongoClient(process.env.MONGO_URL);
+    client = new MongoClient(process.env.MONGODB_URI);
     await client.connect();
 
     db = client.db("graphica");

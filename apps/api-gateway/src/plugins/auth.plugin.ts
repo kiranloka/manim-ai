@@ -2,7 +2,6 @@ import fp from "fastify-plugin";
 import { FastifyPluginAsync } from "fastify";
 import { SubscriptionPlan } from "../models/user.model";
 
-import "../types/fastify-jwt";
 // Extend Fastify interfaces for your custom decorators
 declare module "fastify" {
   interface FastifyInstance {
